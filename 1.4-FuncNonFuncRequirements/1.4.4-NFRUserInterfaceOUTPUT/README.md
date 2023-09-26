@@ -1,2 +1,3 @@
 ### Опис вимог до OUTPUT-потоків інтерфейсу користувача
-![NFR](https://github.com/oleksandrblazhko/ai-213-hrushov/assets/101941157/b624f17c-7600-4f58-b2e2-f5f812aa0d96)
+
+![NFR](https://github.com/oleksandrblazhko/ai-213-hrushov/assets/101941157/1fa8cdf8-a623-4024-8191-8e6a70fecaa6)
