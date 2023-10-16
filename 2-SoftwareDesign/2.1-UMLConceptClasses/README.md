@@ -1,6 +1,5 @@
 UML-діаграма концептуальних класів
 
-
-![UMLConceptClasses](https://github.com/oleksandrblazhko/ai-213-hrushov/assets/101941157/164f14fc-cb20-4edc-a0df-97a42fc887e2)
+![UMLProgramClasses](https://github.com/oleksandrblazhko/ai-213-hrushov/assets/101941157/3c664297-b84b-44a6-94d7-4f3b797b757f)
 
 
