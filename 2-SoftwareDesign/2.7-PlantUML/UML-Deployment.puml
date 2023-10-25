@@ -1,0 +1,44 @@
+@startuml
+
+title UML-діаграма розгортання ПП
+
+left to right direction
+
+skinparam componentStyle uml1
+
+node "<<Настільний комп'ютер>>" as dk1 {
+	node "<<OS Windows, OS Linux, OS MacOS>>" {
+		node "<<Веб-навігатор>>" {
+		      component [*.js(Angular)]
+	     }
+	}
+}
+
+interface Keyboard
+
+interface Mouse
+
+Keyboard -- dk1
+
+Mouse -- dk1
+
+node "<<Сервер 1>>" as serv1 {
+	node "<<OS Linux>>" {
+		node "<<Application Server Apache Tomcat>>" {
+		    component [*.jar]
+	    }
+	}
+}
+
+node "<<Сервер 2>>" as serv2 {
+	node "<<OS Linux >>" {
+		node "<<Database Server PostgreeSQL>>" {
+		    component [Relation DataBase]
+	    }
+	}
+}
+
+dk1 -- serv1
+serv1 -- serv2
+
+@enduml
