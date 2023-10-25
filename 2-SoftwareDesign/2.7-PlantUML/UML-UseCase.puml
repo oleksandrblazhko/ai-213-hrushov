@@ -1,0 +1,57 @@
+@startuml
+
+title UML-діаграма прецедентів
+
+left to right direction
+
+actor "Споживач музичних творів" as actor1
+actor "Технічний персонал" as actor2
+actor "Користувач" as actor3
+actor "Співробітник" as actor4
+actor "API FuSA" as actor5
+actor "ESound" as actor6
+
+rectangle Software {
+
+usecase "Створення музичних творів" as usecase1
+usecase "Аналіз шуму навколишнього середовища" as usecase2
+usecase "Авторизація користувача" as usecase3
+usecase "Запит на необхідну інформацію" as usecase4
+usecase "Зміна рівня шуму" as usecase5
+usecase "Попередній аналіз рівня шуму" as usecase6
+usecase "Аналіз джерел" as usecase7
+usecase "Пошук необхіднї інформації" as usecase8
+usecase "Надання доступу до необхідної інформації" as usecase9
+
+actor3 -- usecase3 
+actor1 --  usecase1 
+actor5 --  usecase2 
+actor2 -- usecase5  
+usecase2 .> usecase3 : include
+usecase4 .> usecase3 : include
+usecase6 .> usecase5 : include
+actor6 -- usecase7
+actor4 -- usecase8
+usecase9 -- actor3
+usecase7 .> usecase8 : include
+usecase8 .> usecase9 : include
+actor4 -- usecase4
+
+
+
+
+
+
+
+
+actor1 -- actor3
+actor2 -- actor3
+actor4 -- actor3
+
+}
+
+
+
+
+
+@enduml
