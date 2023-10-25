@@ -1,0 +1,63 @@
+@startuml
+
+title Example of Relation Schema
+
+hide circle
+
+entity "User" as User {
+    (PK) user
+    --
+    full_name
+    data_of_birth
+    email
+    gender
+}
+
+entity "Request_noise_level" as Requestnoiselevel{
+    (PK) requestnoiselevel
+    --
+    location
+    request_time
+    request_status
+    (FK) user
+    (FK) answeronrequest
+}
+
+entity "Answer_on_request" as Answeronrequest{
+    (PK) answeronrequest
+    --
+    measured_noise_level
+    answer_time
+    answer_status
+    (FK) system
+}
+
+entity "System" as System{
+    (PK) system
+    --
+    measured_noise
+    analyze_noise
+    provide_recommendations
+    (FK) technical_employee
+}
+
+entity "Technical_employee" as Technicalemployee{
+    (PK) technical_employee
+    --
+    position
+    salary
+    login_credentials
+    current_task
+    system_access_level
+}
+
+User --{Requestnoiselevel
+Requestnoiselevel --{Answeronrequest
+System --{Answeronrequest
+System --{Technicalemployee
+Technicalemployee }--{User
+
+
+
+
+@enduml
