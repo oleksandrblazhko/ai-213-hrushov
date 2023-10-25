@@ -1,0 +1,38 @@
+@startuml
+
+title Example of Relation Schema
+
+hide circle
+
+Class User {
+   
+    full_name
+    data_of_birth
+    email
+    gender
+}
+
+Class Request_noise_level{
+   
+    location
+    request_time
+    request_status
+    
+}
+
+Class Answer_on_request{
+  
+    measured_noise_level
+    answer_time
+    answer_status
+    
+}
+
+User"1" --> "*"Request_noise_level: MakesRequest
+Answer_on_request"1" --> "*"Request_noise_level: AnswerRequest
+
+
+
+
+
+@enduml
